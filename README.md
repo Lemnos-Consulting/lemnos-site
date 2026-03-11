@@ -47,7 +47,7 @@
   }
 
   .nav-logo img {
-    height: 44px;
+    height: 88px;
     width: auto;
   }
 
