@@ -8,9 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --kelly: #4DBD14;
-    --forest: #2D6A2D;
-    --orange: #C4612A;
+    --kelly: #4cBb17;
+    --forest: #086108;
+    --orange: #c34803;
     --black: #1A1A1A;
     --off-white: #F7F6F2;
     --light-gray: #EFEFEB;
@@ -47,7 +47,7 @@
   }
 
   .nav-logo img {
-    height: 88px;
+    height: 44px;
     width: auto;
   }
 
@@ -925,8 +925,8 @@
     </div>
     <div class="results-grid">
       <div class="result-item fade-in" style="transition-delay: 0.1s;">
-        <div class="result-number">00K</div>
-        <p class="result-desc">Insurance client closed 00K in rewritten policies within 3 months after we rebuilt their remarketing system — lead list, domain reputation, email templates, automations, and sales handoff.</p>
+        <div class="result-number">300K</div>
+        <p class="result-desc">Insurance client closed 300K in rewritten policies within 3 months after we rebuilt their remarketing system — lead list, domain reputation, email templates, automations, and sales handoff.</p>
         <p class="result-source">Insurance Client</p>
       </div>
       <div class="result-item fade-in" style="transition-delay: 0.2s;">
