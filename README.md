@@ -206,7 +206,7 @@
           <div class="service-number">01 — CRM & Marketing Ops</div>
           <h3>CRM Setup, Administration & Data Governance</h3>
           <p>HubSpot builds from scratch — custom properties, deal pipelines, lifecycle stages, segmentation frameworks. Plus platform migrations, database cleanup, deduplication, normalization, and the lead status definitions that keep marketing and sales aligned.</p>
-          <div class="service-tools">HubSpot · Salesforce (data integration) · Apollo · Clay · ZoomInfo</div>
+          <div class="service-tools">HubSpot · Apollo · Clay · ZoomInfo</div>
         </div>
 
         <div class="service-card">
@@ -220,7 +220,7 @@
           <div class="service-number">03 — Demand Gen & Lead Flow</div>
           <h3>Lead Qualification, Routing & Nurture Infrastructure</h3>
           <p>The systems that connect marketing activity to qualified pipeline. Lead qualification logic, routing rules, enrichment workflows, automated nurture sequences, lifecycle stage models, and multi-channel campaign infrastructure that feeds pipeline from multiple sources.</p>
-          <div class="service-tools">HubSpot · Apollo · Clay · ZoomInfo · Instantly · Lemlist · Dripify</div>
+          <div class="service-tools">HubSpot · Apollo · Clay · ZoomInfo · Instantly</div>
         </div>
 
         <div class="service-card">
@@ -310,7 +310,7 @@
 
       <div class="exp-entry">
         <div class="exp-header">
-          <div class="exp-title">Founder & Marketing Operations Consultant</div>
+          <div class="exp-title">Marketing Operations Consultant</div>
           <div class="exp-dates">Sep 2022 &ndash; Present</div>
         </div>
         <div class="exp-company">Lemnos Consulting LLC</div>
@@ -330,10 +330,10 @@
           <div class="exp-dates">Aug 2018 &ndash; Aug 2022</div>
         </div>
         <div class="exp-company">Good2Go Auto Insurance</div>
-        <p class="exp-desc">Led the marketing technology ecosystem and digital operations for a high-volume D2C insurance brand. Managed a direct report and vendor partnerships across email, paid media, display, and social. Ran a 100K+ contact database in Acoustic with Salesforce data feeds via SFTP. Executed multi-channel remarketing campaigns targeting cancelled policyholders — 2 to 5 concurrent campaigns with email volumes exceeding 100K sends per month.</p>
+        <p class="exp-desc">Led the marketing technology ecosystem and digital operations for a high-volume D2C insurance brand. Managed a direct report and vendor partnerships across email, paid media, display, and social. Ran a 100K+ contact database in Acoustic with data feeds via SFTP. Executed multi-channel remarketing campaigns targeting cancelled policyholders — 2 to 5 concurrent campaigns with email volumes exceeding 100K sends per month.</p>
         <p class="exp-desc">Identified a brand reputation gap and integrated Trustpilot into the website, automated review collection via email, and partnered with sales leadership on a recognition program that improved morale, service quality, and social proof contributing to increased sales.</p>
         <ul class="exp-highlights">
-          <li>Acoustic</li><li>Salesforce (SFTP)</li><li>Google Ads</li><li>StackAdapt</li>
+          <li>Acoustic</li><li>Google Ads</li><li>StackAdapt</li>
           <li>Meta</li><li>LinkedIn</li><li>X</li><li>Trustpilot</li>
           <li>100K+ contacts</li><li>100K+ emails/mo</li>
         </ul>
@@ -350,11 +350,10 @@
         <div class="cred-card"><div class="cred-label">Education</div><div class="cred-value">MBA, Strategic Management & Leadership</div><div class="cred-detail">Gwynedd Mercy University, 2019</div></div>
         <div class="cred-card"><div class="cred-label">Education</div><div class="cred-value">BS, Marketing</div><div class="cred-detail">Gwynedd Mercy University, 2018</div></div>
         <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">HubSpot Marketing Hub Software</div><div class="cred-detail">HubSpot Academy</div></div>
-        <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">HubSpot CRM</div><div class="cred-detail">HubSpot Academy</div></div>
         <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">HubSpot Revenue Operations</div><div class="cred-detail">HubSpot Academy</div></div>
         <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">Google Analytics 4</div><div class="cred-detail">Google</div></div>
         <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">Google Ads (4 certifications)</div><div class="cred-detail">AI-Powered Performance, Shopping, Creative, Apps</div></div>
-        <div class="cred-card"><div class="cred-label">Experience</div><div class="cred-value">8+ Years</div><div class="cred-detail">Marketing Technology & Operations</div></div>
+        <div class="cred-card"><div class="cred-label">Experience</div><div class="cred-value">8+ Years</div><div class="cred-detail">Marketing Operations</div></div>
       </div>
     </div>
   </section>
@@ -377,7 +376,7 @@
           <div class="about-stat">
             <div class="stat-label">Experience</div>
             <div class="stat-value">8+ Years</div>
-            <div class="stat-detail">Marketing technology & operations</div>
+            <div class="stat-detail">Marketing operations</div>
           </div>
           <div class="about-stat">
             <div class="stat-label">Platforms</div>
