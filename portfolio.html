@@ -127,8 +127,8 @@
     footer{padding:3rem 2rem;background:var(--bg-dark)}
     .footer-inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem}
     .footer-copy{font-size:var(--p3);color:var(--gray-mid)}
-    .footer-links{display:flex;gap:2rem}
-    .footer-links a{font-size:var(--p3);color:var(--gray-mid)}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+    .footer-links a,.footer-links span{font-size:var(--p3);color:var(--gray-mid)}
     .footer-links a:hover{color:var(--cream)}
 
     /* RESPONSIVE */
@@ -364,35 +364,28 @@
   <section id="contact" class="fade-in" style="padding-bottom:5rem">
     <div class="section-inner">
       <div class="section-eyebrow">Get In Touch</div>
-      <h2 class="section-title">Best ways to reach me.</h2>
-      <div class="contact-grid">
-        <div>
-          <div class="contact-detail"><span class="label">Email</span><a href="mailto:pete@lemnos.io">pete@lemnos.io</a></div>
-          <div class="contact-detail"><span class="label">Phone</span><span>(856) 905-2166</span></div>
-          <div class="contact-detail"><span class="label">LinkedIn</span><a href="https://linkedin.com/in/pete-delago" target="_blank">linkedin.com/in/pete-delago</a></div>
-          <div class="contact-detail"><span class="label">Location</span><span>Lafayette Hill, PA (Remote)</span></div>
+      <h2 class="section-title">Send a message.</h2>
+      <form id="lead-form" class="lead-form" novalidate>
+        <input type="hidden" name="inquiryType" value="career">
+        <div class="form-row">
+          <input type="text" name="firstName" placeholder="First name *" required autocomplete="given-name">
+          <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name">
         </div>
-        <form id="lead-form" class="lead-form" novalidate>
-          <input type="hidden" name="inquiryType" value="career">
-          <div class="form-row">
-            <input type="text" name="firstName" placeholder="First name *" required autocomplete="given-name">
-            <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name">
-          </div>
-          <input type="email" name="email" placeholder="Email *" required autocomplete="email">
-          <input type="text" name="company" placeholder="Company / organization" autocomplete="organization">
-          <select name="source" required>
-            <option value="">Your role *</option>
-            <option value="Hiring manager / Director / VP">Hiring manager / Director / VP</option>
-            <option value="In-house recruiter">In-house recruiter</option>
-            <option value="Agency recruiter">Agency recruiter</option>
-            <option value="Marketing ops peer">Marketing ops peer / fellow operator</option>
-            <option value="Other">Something else</option>
-          </select>
-          <textarea name="message" placeholder="What are you reaching out about? (optional)" rows="3"></textarea>
-          <button type="submit" class="btn-primary form-submit">Send</button>
-          <div class="form-status" role="status" aria-live="polite"></div>
-        </form>
-      </div>
+        <input type="email" name="email" placeholder="Email *" required autocomplete="email">
+        <input type="text" name="company" placeholder="Company / organization" autocomplete="organization">
+        <select name="source" required>
+          <option value="">Role you're hiring for *</option>
+          <option value="Marketing Operations Lead">Marketing Operations Lead</option>
+          <option value="Senior Marketing Operations Manager">Senior Marketing Operations Manager</option>
+          <option value="Marketing Operations Manager">Marketing Operations Manager</option>
+          <option value="Director of Marketing Operations / RevOps">Director of Marketing Operations / RevOps</option>
+          <option value="Other marketing ops / RevOps role">Other marketing ops / RevOps role</option>
+          <option value="Just exploring / no specific role">Just exploring / no specific role</option>
+        </select>
+        <textarea name="message" placeholder="Anything else worth knowing? (optional)" rows="3"></textarea>
+        <button type="submit" class="btn-primary form-submit">Send</button>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
     </div>
   </section>
 
@@ -401,9 +394,11 @@
     <div class="footer-inner">
       <div class="footer-copy">&copy; Pete Delago · Lemnos Consulting LLC</div>
       <div class="footer-links">
-        <a href="/">Lemnos Consulting</a>
-        <a href="mailto:pete@lemnos.io">Email</a>
+        <a href="mailto:pete@lemnos.io">pete@lemnos.io</a>
+        <span>(856) 905-2166</span>
         <a href="https://linkedin.com/in/pete-delago" target="_blank">LinkedIn</a>
+        <span>Lafayette Hill, PA (Remote)</span>
+        <a href="/">Lemnos Consulting</a>
       </div>
     </div>
   </footer>
