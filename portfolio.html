@@ -1,0 +1,403 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pete Delago — Founder Portfolio · Lemnos Consulting</title>
+  <meta name="description" content="Founder portfolio for Lemnos Consulting. Marketing operations case studies, career history, and stack from 8+ years building and operating martech systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --green:#4CBB17;--green-dark:#086108;--orange:#F28606;--purple:#8710D2;
+      --black:#0B0B0B;--cream:#EAE8E4;--gray:#A0A0A0;--gray-mid:#888888;
+      --gray-light:#CCCCCC;--white:#FFFFFF;
+      --bg:var(--white);--bg-card:#F7F6F4;--bg-card-hover:var(--cream);
+      --bg-dark:var(--black);--text:var(--black);--text-dim:var(--gray-mid);
+      --accent:var(--green);--accent-dark:var(--green-dark);
+      --border:rgba(11,11,11,0.08);--border-dark:rgba(255,255,255,0.08);
+      --h1:61px;--h2:40px;--h3:32px;--h5:24px;--h6:22px;
+      --p1:17px;--p2:15px;--p3:14px;
+      --serif:'Bebas Neue',sans-serif;
+      --sans:'Outfit',-apple-system,sans-serif;
+      --max-w:1120px
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;font-size:var(--p1);-webkit-font-smoothing:antialiased}
+    ::selection{background:var(--green);color:var(--white)}
+    a{color:var(--green-dark);text-decoration:none;transition:color .2s}
+    a:hover{color:var(--green)}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;background:#FFFFFF;border-bottom:1px solid var(--border)}
+    .nav-back{font-size:var(--p3);letter-spacing:.05em;text-transform:uppercase;color:var(--gray-mid);font-weight:500}
+    .nav-back:hover{color:var(--black)}
+    .nav-back span{color:var(--green)}
+    .nav-links{display:flex;gap:2rem;align-items:center}
+    .nav-links a{color:var(--gray-mid);font-size:var(--p3);letter-spacing:.05em;text-transform:uppercase;font-weight:500}
+    .nav-links a:hover{color:var(--black)}
+    .nav-cta{background:var(--green);color:var(--white)!important;padding:.5rem 1.25rem;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s}
+    .nav-cta:hover{background:var(--green-dark);color:var(--white)!important}
+
+    /* HERO */
+    .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:9rem 2rem 5rem;background:var(--bg-dark);color:var(--cream);position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(76,187,23,0.06) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{max-width:var(--max-w);margin:0 auto;width:100%}
+    .hero-eyebrow{font-size:var(--p3);letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:1.5rem;font-weight:500}
+    .hero h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,var(--h1));line-height:1.1;font-weight:400;margin-bottom:1.5rem;color:var(--cream)}
+    .hero-sub{font-size:1.35rem;color:var(--cream);max-width:760px;line-height:1.5;margin-bottom:2rem;font-weight:300}
+    .hero-bio{font-size:1.05rem;color:var(--gray);max-width:660px;line-height:1.8;margin-bottom:3rem}
+    .hero-links{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
+    .btn-primary{display:inline-block;background:var(--green);color:var(--white);padding:.9rem 2.25rem;font-size:var(--p3);font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;border:none;cursor:pointer}
+    .btn-primary:hover{background:var(--green-dark);color:var(--white)}
+    .btn-outline{display:inline-block;border:1px solid var(--gray-mid);color:var(--gray);padding:.85rem 2.25rem;font-size:var(--p3);font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
+    .btn-outline:hover{border-color:var(--cream);color:var(--cream)}
+
+    /* SECTIONS */
+    section{padding:6rem 2rem}
+    .section-inner{max-width:var(--max-w);margin:0 auto}
+    .section-eyebrow{font-size:var(--p3);letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;font-weight:600}
+    .section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,var(--h2));line-height:1.15;font-weight:400;margin-bottom:1.5rem;max-width:760px;color:var(--black)}
+    .section-body{color:var(--gray-mid);max-width:680px;font-size:1.05rem;line-height:1.8}
+    .section-body+.section-body{margin-top:1.25rem}
+    .dark-section{background:var(--bg-dark);color:var(--cream)}
+    .dark-section .section-title{color:var(--cream)}
+    .dark-section .section-body{color:var(--gray)}
+    .dark-section .section-eyebrow{color:var(--green)}
+
+    /* CURRENTLY EXPLORING CALLOUT */
+    .currently{background:rgba(76,187,23,0.05);border-left:3px solid var(--green);padding:1.75rem 2rem;margin:0 auto;max-width:var(--max-w)}
+    .currently-inner{max-width:760px;margin:0 auto}
+    .currently-label{font-size:var(--p3);letter-spacing:.18em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:.5rem}
+    .currently p{color:var(--text);font-size:1.05rem;line-height:1.6}
+    .currently a{font-weight:600}
+
+    /* CASE STUDIES */
+    .case-grid{display:flex;flex-direction:column;gap:2rem;margin-top:3rem}
+    .case-card{background:var(--bg-card);border:1px solid var(--border);padding:2.5rem;transition:all .3s}
+    .case-card:hover{border-color:rgba(76,187,23,0.2)}
+    .case-eyebrow{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem;font-weight:700}
+    .case-card h3{font-family:var(--serif);font-size:var(--h3);font-weight:400;margin-bottom:1.25rem;line-height:1.2;color:var(--black)}
+    .case-block{margin-bottom:1.25rem}
+    .case-block:last-child{margin-bottom:0}
+    .case-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:.5rem}
+    .case-block p{color:var(--gray-mid);font-size:var(--p2);line-height:1.75}
+    .case-tools{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:var(--p3);color:var(--green-dark);font-weight:500;letter-spacing:.02em}
+
+    /* CAREER TIMELINE */
+    .career-list{margin-top:3rem;display:flex;flex-direction:column;gap:2.5rem}
+    .career-entry{padding-bottom:2.5rem;border-bottom:1px solid var(--border-dark)}
+    .career-entry:last-child{border-bottom:none;padding-bottom:0}
+    .career-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem;margin-bottom:.5rem}
+    .career-title{font-family:var(--serif);font-size:var(--h5);color:var(--cream)}
+    .career-dates{font-size:var(--p3);color:var(--gray-mid);letter-spacing:.05em}
+    .career-company{font-size:var(--p2);color:var(--green);font-weight:500;margin-bottom:1rem}
+    .career-desc{color:var(--gray);font-size:var(--p2);line-height:1.8;margin-bottom:.75rem}
+
+    /* STACK */
+    .stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+    .stack-card{background:var(--bg-card);border:1px solid var(--border);padding:1.75rem}
+    .stack-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:.75rem}
+    .stack-card h4{font-family:var(--serif);font-size:1.15rem;color:var(--black);margin-bottom:.75rem;font-weight:400}
+    .stack-tools{font-size:var(--p3);color:var(--gray-mid);line-height:1.7}
+
+    /* CREDENTIALS */
+    .cred-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:3rem}
+    .cred-card{background:rgba(255,255,255,0.03);border:1px solid var(--border-dark);padding:1.5rem}
+    .cred-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem;font-weight:700}
+    .cred-value{font-weight:600;font-size:var(--p1);color:var(--cream)}
+    .cred-detail{font-size:var(--p3);color:var(--gray-mid);margin-top:.25rem}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
+    .contact-detail{padding:1rem 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+    .contact-detail .label{font-size:var(--p3);letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+    .contact-cta{background:var(--bg-card);border:1px solid var(--border);padding:2rem}
+    .contact-cta h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;margin-bottom:.75rem;color:var(--black)}
+    .contact-cta p{color:var(--gray-mid);font-size:var(--p2);line-height:1.7;margin-bottom:1.5rem}
+
+    /* FOOTER */
+    footer{padding:3rem 2rem;background:var(--bg-dark)}
+    .footer-inner{max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .footer-copy{font-size:var(--p3);color:var(--gray-mid)}
+    .footer-links{display:flex;gap:2rem}
+    .footer-links a{font-size:var(--p3);color:var(--gray-mid)}
+    .footer-links a:hover{color:var(--cream)}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .nav-cta{display:inline-block}
+      .hero{padding:8rem 1.5rem 4rem}
+      section{padding:4rem 1.5rem}
+      .case-card{padding:1.75rem}
+      .career-header{flex-direction:column}
+      .contact-grid{grid-template-columns:1fr;gap:2rem}
+      .footer-inner{flex-direction:column;text-align:center}
+      .hero-links{flex-direction:column;align-items:flex-start}
+    }
+
+    /* ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-back"><span>&larr;</span> Lemnos Consulting</a>
+    <div class="nav-links">
+      <a href="#work">Case Studies</a>
+      <a href="#career">Career</a>
+      <a href="#stack">Stack</a>
+      <a href="/#contact" class="nav-cta">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">About the Founder</div>
+      <h1>Pete Delago</h1>
+      <p class="hero-sub">Marketing operations leader. Build-and-operate martech systems for SMBs in regulated and mission-driven verticals.</p>
+      <p class="hero-bio">Founder of Lemnos Consulting. 8+ years of in-house leadership before going independent — running marketing technology, digital operations, and the cross-functional translation work that makes systems actually land inside organizations.</p>
+      <div class="hero-links">
+        <a href="#work" class="btn-primary">See the work</a>
+        <a href="/#contact" class="btn-outline">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CURRENTLY EXPLORING -->
+  <div class="currently">
+    <div class="currently-inner">
+      <div class="currently-label">Currently exploring</div>
+      <p>Open to senior marketing operations roles — <strong>Lead, Senior Manager, or MOps Manager</strong> — at 50&ndash;500 employee companies in mission-driven or regulated DTC verticals. Remote or hybrid Philadelphia metro. <a href="/#contact">Get in touch &rarr;</a></p>
+    </div>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <section id="work" class="fade-in">
+    <div class="section-inner">
+      <div class="section-eyebrow">Case Studies</div>
+      <h2 class="section-title">Four engagements that show the pattern.</h2>
+      <p class="section-body">Mix of build, operate, and translate. The thread across all of them: systems that work because someone stayed close enough to the business to keep them working.</p>
+
+      <div class="case-grid">
+
+        <div class="case-card">
+          <div class="case-eyebrow">Attribution · Good2Go Auto Insurance</div>
+          <h3>TV/radio attribution model that unlocked digital budget.</h3>
+          <div class="case-block">
+            <div class="case-label">Setup</div>
+            <p>A regional auto insurer with significant ad spend, heavily weighted toward TV and radio. Leadership was convinced TV drove almost all website traffic and resisted reallocating budget to digital. The team's read was that the picture was more complicated, but there was no data to argue with.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Action</div>
+            <p>Built a small attribution model reconciling site-traffic sources against TV and radio creative cadence. Showed where digital was actually contributing &mdash; not as a replacement story, but as a "yes, AND" story leadership could absorb. Speaking in their numbers, not in marketing theory, was the unlock.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Outcome</div>
+            <p>Budget freed up for digital + direct mail integration. Copy and creative aligned across channels. QR codes added to direct mail (early move for the category). Leadership opened up to broader channel experimentation that would have been blocked six months earlier.</p>
+          </div>
+          <div class="case-tools">Attribution modeling · Cross-functional translation · Channel mix</div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-eyebrow">CRM Build &amp; Reuse · Alliance Insurance</div>
+          <h3>One HubSpot instance, reused across four business pivots.</h3>
+          <div class="case-block">
+            <div class="case-label">Setup</div>
+            <p>Alliance — a regional insurance underwriter — came on as Lemnos' primary retainer client with no real CRM in place. Salesforce was being used as a glorified contact list; lead routing was tribal knowledge. They needed working sales infrastructure, fast.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Action</div>
+            <p>Built one HubSpot instance from scratch &mdash; custom properties, deal pipelines, lifecycle stages, lead qualification logic, routing rules. Then, as the business pivoted three times over the next 24 months (different ICPs, different funnel models, different messaging), repurposed the same instance instead of rebuilding. Same database, different segmentation. Same pipelines, different lifecycle stages.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Outcome</div>
+            <p>Sales operations survived four business pivots without ever being torn down. Cost of pivoting got cheaper each time. Agency rotation across email, creative, ads, and dev was orchestrated through one consistent system.</p>
+          </div>
+          <div class="case-tools">HubSpot · Lifecycle design · Agency orchestration · Build-and-operate retainer</div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-eyebrow">AI / Automation · Lemnos Project</div>
+          <h3>Autonomous lead-processing agent that turns 8K raw records into sales-ready audiences.</h3>
+          <div class="case-block">
+            <div class="case-label">Setup</div>
+            <p>A B2B target list of ~8,000 D&amp;B records &mdash; companies that fit ICP, but with the usual problems: missing decision-maker contacts, unverified emails, catch-all domains, no segmentation, no clear path into HubSpot or an ad platform.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Action</div>
+            <p>Built an autonomous lead-processing pipeline in Clay. Normalization &rarr; dual email verification (Hunter + LeadMagic) &rarr; person enrichment &rarr; LinkedIn matching &rarr; catch-all domain detection &rarr; segmentation. Output: sales-ready audiences split by segment, ready to push into HubSpot lifecycle stages and ad-platform custom audiences. Manual intervention is limited to config and guardrails &mdash; the agent processes records autonomously past that point.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Outcome</div>
+            <p>A reusable pipeline that compresses what would have been weeks of manual research into a single overnight run. Same input shape; different output segmentation depending on the campaign objective. The work expanded the category of problems Lemnos could quote for SMB clients with no in-house data team.</p>
+          </div>
+          <div class="case-tools">Clay · Hunter · LeadMagic · ZoomInfo · Agentic workflows</div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-eyebrow">Workflow + Vendor Orchestration · Polly Insurance via Mako Direct</div>
+          <h3>Three-tier drip workflow inside a 100K+ lead pipeline.</h3>
+          <div class="case-block">
+            <div class="case-label">Setup</div>
+            <p>Polly Insurance was running multi-channel lead acquisition through MediaAlpha, Datalot, and partner email vendors &mdash; high-volume inbound flowing into an existing HubSpot instance. What was missing was a structured nurture workflow that could route leads into the right sequence based on source, intent signal, and lifecycle stage.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Action</div>
+            <p>Designed and built a three-tier drip workflow inside the existing HubSpot instance &mdash; multi-list segmentation, multi-branch routing, with last-touch attribution reporting layered on top. Coordinated execution across five external parties: MediaAlpha, Datalot, the developer, the email vendor, and Polly's internal sales team.</p>
+          </div>
+          <div class="case-block">
+            <div class="case-label">Outcome</div>
+            <p>Inbound leads moved through a structured path into Polly's pipeline instead of a flat blast. Attribution reporting closed the loop on what was actually driving conversions vs. just sends. Vendor handoffs ran on a predictable cadence.</p>
+          </div>
+          <div class="case-tools">HubSpot · MediaAlpha · Datalot · Multi-vendor orchestration · Attribution</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section id="career" class="dark-section fade-in">
+    <div class="section-inner">
+      <div class="section-eyebrow">Career</div>
+      <h2 class="section-title" style="color:var(--cream)">Where the work happened.</h2>
+      <div class="career-list">
+
+        <div class="career-entry">
+          <div class="career-header">
+            <div class="career-title">Founder &amp; Marketing Operations Consultant</div>
+            <div class="career-dates">Apr 2023 &ndash; Present</div>
+          </div>
+          <div class="career-company">Lemnos Consulting LLC</div>
+          <p class="career-desc">Marketing technology consultancy. One primary retainer client across four business pivots, plus selective short-term project engagements. Built and operated the full martech ecosystem &mdash; CRM, email, paid media, automation, and cross-channel BI reporting. Built one HubSpot instance from scratch and repurposed it across business pivots. Plus database cleanup and enrichment, lead qualification and routing, ad campaign infrastructure, and Looker Studio dashboards.</p>
+        </div>
+
+        <div class="career-entry">
+          <div class="career-header">
+            <div class="career-title">Director of Marketing Operations</div>
+            <div class="career-dates">Jul 2022 &ndash; Apr 2023</div>
+          </div>
+          <div class="career-company">Mako Direct Marketing</div>
+          <p class="career-desc">Marketing operations leadership for an insurance lead-generation agency. Owned execution for Polly Insurance — a primary client running multi-channel lead acquisition through MediaAlpha, Datalot, and partner email vendors. Built a multi-list, multi-branch, three-tier drip workflow inside Polly's existing HubSpot with last-touch attribution. Coordinated execution across five external parties.</p>
+        </div>
+
+        <div class="career-entry">
+          <div class="career-header">
+            <div class="career-title">Director, Digital Marketing &amp; Analytics</div>
+            <div class="career-dates">Aug 2018 &ndash; Aug 2022</div>
+          </div>
+          <div class="career-company">Good2Go Auto Insurance</div>
+          <p class="career-desc">Led the marketing technology ecosystem and digital operations for a high-volume D2C insurance brand. Managed a direct report and vendor partnerships across email, paid media, display, and social. Ran a 100K+ contact database in Acoustic with Salesforce data feeds. Executed multi-channel remarketing campaigns targeting cancelled policyholders &mdash; 2 to 5 concurrent campaigns with email volumes exceeding 100K sends per month. Built a TV/radio attribution model that opened up digital budget reallocation. Integrated Trustpilot and partnered with sales leadership on a recognition program that improved morale, service quality, and social proof.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="fade-in">
+    <div class="section-inner">
+      <div class="section-eyebrow">Stack</div>
+      <h2 class="section-title">Tools I've configured and managed.</h2>
+      <p class="section-body">Not a wish list. Each of these has been used in production for real campaigns, real data, real handoffs.</p>
+
+      <div class="stack-grid">
+        <div class="stack-card">
+          <div class="stack-label">CRM &amp; Sales</div>
+          <h4>Pipeline and lifecycle</h4>
+          <p class="stack-tools">HubSpot (Marketing &amp; Sales Hub) · Salesforce (data integration via SFTP) · Apollo</p>
+        </div>
+        <div class="stack-card">
+          <div class="stack-label">Email &amp; Outreach</div>
+          <h4>Nurture and cold</h4>
+          <p class="stack-tools">Acoustic · Mailchimp · Constant Contact · Instantly · Lemlist · Woodpecker · ActiveCampaign</p>
+        </div>
+        <div class="stack-card">
+          <div class="stack-label">Paid &amp; Programmatic</div>
+          <h4>Acquisition channels</h4>
+          <p class="stack-tools">Google Ads · Performance Max · StackAdapt · Meta · LinkedIn · X</p>
+        </div>
+        <div class="stack-card">
+          <div class="stack-label">Data &amp; Enrichment</div>
+          <h4>Lists, signals, and audiences</h4>
+          <p class="stack-tools">Clay · ZoomInfo · Apollo · Hunter · LeadMagic · D&amp;B</p>
+        </div>
+        <div class="stack-card">
+          <div class="stack-label">Analytics &amp; Reporting</div>
+          <h4>Measurement and BI</h4>
+          <p class="stack-tools">GA4 · GTM · Looker Studio · Microsoft Clarity · Google Search Console</p>
+        </div>
+        <div class="stack-card">
+          <div class="stack-label">Other</div>
+          <h4>Web, scripting, automation</h4>
+          <p class="stack-tools">Wix · Webflow · Apps Script · GitHub · n8n · API/webhook/custom code</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" class="dark-section fade-in">
+    <div class="section-inner">
+      <div class="section-eyebrow">Credentials</div>
+      <h2 class="section-title" style="color:var(--cream)">Education &amp; certifications.</h2>
+      <div class="cred-grid">
+        <div class="cred-card"><div class="cred-label">Education</div><div class="cred-value">MBA, Strategic Management &amp; Leadership</div><div class="cred-detail">Gwynedd Mercy University, 2019</div></div>
+        <div class="cred-card"><div class="cred-label">Education</div><div class="cred-value">BS, Marketing</div><div class="cred-detail">Gwynedd Mercy University, 2018</div></div>
+        <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">HubSpot Marketing Hub Software</div><div class="cred-detail">HubSpot Academy</div></div>
+        <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">HubSpot CRM</div><div class="cred-detail">HubSpot Academy</div></div>
+        <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">HubSpot Revenue Operations</div><div class="cred-detail">HubSpot Academy</div></div>
+        <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">Google Analytics 4</div><div class="cred-detail">Google</div></div>
+        <div class="cred-card"><div class="cred-label">Certification</div><div class="cred-value">Google Ads (4 certifications)</div><div class="cred-detail">AI-Powered Performance, Shopping, Creative, Apps</div></div>
+        <div class="cred-card"><div class="cred-label">Experience</div><div class="cred-value">8+ Years</div><div class="cred-detail">Marketing technology &amp; operations</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade-in" style="padding-bottom:5rem">
+    <div class="section-inner">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title">Best ways to reach me.</h2>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-detail"><span class="label">Email</span><a href="mailto:pete@lemnos.io">pete@lemnos.io</a></div>
+          <div class="contact-detail"><span class="label">Phone</span><span>(856) 905-2166</span></div>
+          <div class="contact-detail"><span class="label">LinkedIn</span><a href="https://linkedin.com/in/pete-delago" target="_blank">linkedin.com/in/pete-delago</a></div>
+          <div class="contact-detail"><span class="label">Location</span><span>Lafayette Hill, PA (Remote)</span></div>
+        </div>
+        <div class="contact-cta">
+          <h3>Prefer a form?</h3>
+          <p>The Lemnos contact form captures hiring inquiries and client inquiries through the same channel. Use the &ldquo;hiring manager / recruiter&rdquo; option if you&rsquo;re reaching out about a full-time role.</p>
+          <a href="/#contact" class="btn-primary">Open contact form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy">&copy; Pete Delago · Lemnos Consulting LLC</div>
+      <div class="footer-links">
+        <a href="/">Lemnos Consulting</a>
+        <a href="mailto:pete@lemnos.io">Email</a>
+        <a href="https://linkedin.com/in/pete-delago" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  </script>
+
+</body>
+</html>
