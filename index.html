@@ -384,6 +384,7 @@
       <p class="section-body">Tell us what you're working on — current stack, what's broken, what's missing. We'll come back within one business day.</p>
       <div class="contact-form-wrap">
         <form id="lead-form" class="lead-form" novalidate>
+          <input type="hidden" name="inquiryType" value="client">
           <div class="form-row">
             <input type="text" name="firstName" placeholder="First name *" required autocomplete="given-name">
             <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name">
@@ -391,12 +392,13 @@
           <input type="email" name="email" placeholder="Email *" required autocomplete="email">
           <input type="text" name="company" placeholder="Company" autocomplete="organization">
           <select name="source" required>
-            <option value="">I'm reaching out as... *</option>
-            <option value="hiring-manager">Hiring manager / recruiter</option>
-            <option value="potential-client">Potential client</option>
-            <option value="other">Something else</option>
+            <option value="">What are you looking for? *</option>
+            <option value="Build + operate retainer">Build + operate retainer</option>
+            <option value="Specific project / build">Specific project / build</option>
+            <option value="Operations management">Operations management (run existing stack)</option>
+            <option value="General inquiry">Not sure yet / general inquiry</option>
           </select>
-          <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+          <textarea name="message" placeholder="Tell us about your stack (optional)" rows="3"></textarea>
           <button type="submit" class="btn-primary form-submit">Send</button>
           <div class="form-status" role="status" aria-live="polite"></div>
         </form>

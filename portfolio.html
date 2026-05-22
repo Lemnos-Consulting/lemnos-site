@@ -66,12 +66,18 @@
     .dark-section .section-body{color:var(--gray)}
     .dark-section .section-eyebrow{color:var(--green)}
 
-    /* CURRENTLY EXPLORING CALLOUT */
-    .currently{background:rgba(76,187,23,0.05);border-left:3px solid var(--green);padding:1.75rem 2rem;margin:0 auto;max-width:var(--max-w)}
-    .currently-inner{max-width:760px;margin:0 auto}
-    .currently-label{font-size:var(--p3);letter-spacing:.18em;text-transform:uppercase;color:var(--green-dark);font-weight:700;margin-bottom:.5rem}
-    .currently p{color:var(--text);font-size:1.05rem;line-height:1.6}
-    .currently a{font-weight:600}
+    /* CONTACT FORM */
+    .lead-form{display:flex;flex-direction:column;gap:1rem;max-width:560px}
+    .lead-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .lead-form input,.lead-form select,.lead-form textarea{font-family:inherit;font-size:var(--p2);padding:.85rem 1rem;border:1px solid var(--border);background:var(--white);color:var(--text);transition:border-color .2s;width:100%}
+    .lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:none;border-color:var(--green)}
+    .lead-form select{cursor:pointer}
+    .lead-form textarea{resize:vertical;min-height:90px;line-height:1.6}
+    .form-submit{align-self:flex-start;margin-top:.5rem}
+    .form-submit:disabled{opacity:.5;cursor:not-allowed}
+    .form-status{font-size:var(--p3);margin-top:.5rem;min-height:1.5em}
+    .form-status.success{color:var(--green-dark)}
+    .form-status.error{color:#C0392B}
 
     /* CASE STUDIES */
     .case-grid{display:flex;flex-direction:column;gap:2rem;margin-top:3rem}
@@ -136,6 +142,7 @@
       .contact-grid{grid-template-columns:1fr;gap:2rem}
       .footer-inner{flex-direction:column;text-align:center}
       .hero-links{flex-direction:column;align-items:flex-start}
+      .lead-form .form-row{grid-template-columns:1fr}
     }
 
     /* ANIMATIONS */
@@ -170,14 +177,6 @@
     </div>
   </header>
 
-  <!-- CURRENTLY EXPLORING -->
-  <div class="currently">
-    <div class="currently-inner">
-      <div class="currently-label">Currently exploring</div>
-      <p>Open to senior marketing operations roles — <strong>Lead, Senior Manager, or MOps Manager</strong> — at 50&ndash;500 employee companies in mission-driven or regulated DTC verticals. Remote or hybrid Philadelphia metro. <a href="/#contact">Get in touch &rarr;</a></p>
-    </div>
-  </div>
-
   <!-- CASE STUDIES -->
   <section id="work" class="fade-in">
     <div class="section-inner">
@@ -206,11 +205,11 @@
         </div>
 
         <div class="case-card">
-          <div class="case-eyebrow">CRM Build &amp; Reuse · Alliance Insurance</div>
+          <div class="case-eyebrow">CRM Build &amp; Reuse · Insurance</div>
           <h3>One HubSpot instance, reused across four business pivots.</h3>
           <div class="case-block">
             <div class="case-label">Setup</div>
-            <p>Alliance — a regional insurance underwriter — came on as Lemnos' primary retainer client with no real CRM in place. Salesforce was being used as a glorified contact list; lead routing was tribal knowledge. They needed working sales infrastructure, fast.</p>
+            <p>A regional insurance underwriter came on as Lemnos' primary retainer client with no real CRM in place. Salesforce was being used as a glorified contact list; lead routing was tribal knowledge. They needed working sales infrastructure, fast.</p>
           </div>
           <div class="case-block">
             <div class="case-label">Action</div>
@@ -242,19 +241,19 @@
         </div>
 
         <div class="case-card">
-          <div class="case-eyebrow">Workflow + Vendor Orchestration · Polly Insurance via Mako Direct</div>
+          <div class="case-eyebrow">Workflow + Vendor Orchestration · Insurance Lead Gen via Mako Direct</div>
           <h3>Three-tier drip workflow inside a 100K+ lead pipeline.</h3>
           <div class="case-block">
             <div class="case-label">Setup</div>
-            <p>Polly Insurance was running multi-channel lead acquisition through MediaAlpha, Datalot, and partner email vendors &mdash; high-volume inbound flowing into an existing HubSpot instance. What was missing was a structured nurture workflow that could route leads into the right sequence based on source, intent signal, and lifecycle stage.</p>
+            <p>The agency's primary insurance client was running multi-channel lead acquisition through MediaAlpha, Datalot, and partner email vendors &mdash; high-volume inbound flowing into an existing HubSpot instance. What was missing was a structured nurture workflow that could route leads into the right sequence based on source, intent signal, and lifecycle stage.</p>
           </div>
           <div class="case-block">
             <div class="case-label">Action</div>
-            <p>Designed and built a three-tier drip workflow inside the existing HubSpot instance &mdash; multi-list segmentation, multi-branch routing, with last-touch attribution reporting layered on top. Coordinated execution across five external parties: MediaAlpha, Datalot, the developer, the email vendor, and Polly's internal sales team.</p>
+            <p>Designed and built a three-tier drip workflow inside the existing HubSpot instance &mdash; multi-list segmentation, multi-branch routing, with last-touch attribution reporting layered on top. Coordinated execution across five external parties: MediaAlpha, Datalot, the developer, the email vendor, and the client's internal sales team.</p>
           </div>
           <div class="case-block">
             <div class="case-label">Outcome</div>
-            <p>Inbound leads moved through a structured path into Polly's pipeline instead of a flat blast. Attribution reporting closed the loop on what was actually driving conversions vs. just sends. Vendor handoffs ran on a predictable cadence.</p>
+            <p>Inbound leads moved through a structured path into the client's pipeline instead of a flat blast. Attribution reporting closed the loop on what was actually driving conversions vs. just sends. Vendor handoffs ran on a predictable cadence.</p>
           </div>
           <div class="case-tools">HubSpot · MediaAlpha · Datalot · Multi-vendor orchestration · Attribution</div>
         </div>
@@ -285,7 +284,7 @@
             <div class="career-dates">Jul 2022 &ndash; Apr 2023</div>
           </div>
           <div class="career-company">Mako Direct Marketing</div>
-          <p class="career-desc">Marketing operations leadership for an insurance lead-generation agency. Owned execution for Polly Insurance — a primary client running multi-channel lead acquisition through MediaAlpha, Datalot, and partner email vendors. Built a multi-list, multi-branch, three-tier drip workflow inside Polly's existing HubSpot with last-touch attribution. Coordinated execution across five external parties.</p>
+          <p class="career-desc">Marketing operations leadership for an insurance lead-generation agency. Owned execution for the agency's primary insurance client &mdash; multi-channel lead acquisition through MediaAlpha, Datalot, and partner email vendors. Built a multi-list, multi-branch, three-tier drip workflow inside the client's existing HubSpot with last-touch attribution. Coordinated execution across five external parties.</p>
         </div>
 
         <div class="career-entry">
@@ -373,11 +372,26 @@
           <div class="contact-detail"><span class="label">LinkedIn</span><a href="https://linkedin.com/in/pete-delago" target="_blank">linkedin.com/in/pete-delago</a></div>
           <div class="contact-detail"><span class="label">Location</span><span>Lafayette Hill, PA (Remote)</span></div>
         </div>
-        <div class="contact-cta">
-          <h3>Prefer a form?</h3>
-          <p>The Lemnos contact form captures hiring inquiries and client inquiries through the same channel. Use the &ldquo;hiring manager / recruiter&rdquo; option if you&rsquo;re reaching out about a full-time role.</p>
-          <a href="/#contact" class="btn-primary">Open contact form</a>
-        </div>
+        <form id="lead-form" class="lead-form" novalidate>
+          <input type="hidden" name="inquiryType" value="career">
+          <div class="form-row">
+            <input type="text" name="firstName" placeholder="First name *" required autocomplete="given-name">
+            <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name">
+          </div>
+          <input type="email" name="email" placeholder="Email *" required autocomplete="email">
+          <input type="text" name="company" placeholder="Company / organization" autocomplete="organization">
+          <select name="source" required>
+            <option value="">Your role *</option>
+            <option value="Hiring manager / Director / VP">Hiring manager / Director / VP</option>
+            <option value="In-house recruiter">In-house recruiter</option>
+            <option value="Agency recruiter">Agency recruiter</option>
+            <option value="Marketing ops peer">Marketing ops peer / fellow operator</option>
+            <option value="Other">Something else</option>
+          </select>
+          <textarea name="message" placeholder="What are you reaching out about? (optional)" rows="3"></textarea>
+          <button type="submit" class="btn-primary form-submit">Send</button>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
   </section>
@@ -397,6 +411,33 @@
   <script>
     const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});
     document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+    const leadForm=document.getElementById('lead-form');
+    if(leadForm){
+      leadForm.addEventListener('submit',async(e)=>{
+        e.preventDefault();
+        const status=leadForm.querySelector('.form-status');
+        const btn=leadForm.querySelector('.form-submit');
+        const data=Object.fromEntries(new FormData(leadForm).entries());
+        if(!data.email||!data.firstName||!data.source){status.textContent='Please fill in the required fields.';status.className='form-status error';return}
+        btn.disabled=true;status.textContent='Sending…';status.className='form-status';
+        try{
+          const res=await fetch('https://lemnos.app.n8n.cloud/webhook/lead-intake',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(data)
+          });
+          if(!res.ok)throw new Error('Network error');
+          status.textContent='Thanks — Pete will get back to you within 1 business day.';
+          status.className='form-status success';
+          leadForm.reset();
+        }catch(err){
+          status.textContent='Something went wrong. Email pete@lemnos.io directly if it keeps failing.';
+          status.className='form-status error';
+          btn.disabled=false;
+        }
+      });
+    }
   </script>
 
 </body>
