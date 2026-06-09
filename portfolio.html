@@ -492,9 +492,9 @@
     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.6 1.27 4.93 3.3 6.53L4 22l4.86-2.06c.99.3 2.05.46 3.14.46 5.52 0 10-4.04 10-9S17.52 2 12 2z"/></svg>
   </button>
 
-  <div id="rasa-panel" role="dialog" aria-label="Chat with Lemnos">
+  <div id="rasa-panel" role="dialog" aria-label="Chat with Lemmy">
     <div id="rasa-head">
-      <div><div class="t">Chat with Lemnos</div><div class="s">Ask about our services</div></div>
+      <div><div class="t">Lemmy</div><div class="s">Lemnos demand-gen assistant</div></div>
       <button id="rasa-close" aria-label="Close chat">&times;</button>
     </div>
     <div id="rasa-msgs"></div>
@@ -560,7 +560,7 @@
     }
 
     function openPanel(){panel.classList.add('open');input.focus();
-      if(!greeted){greeted=true;addMsg('Hi! I’m the Lemnos assistant. Ask me about our demand generation services, or tell me what you’re working on.','bot');}}
+      if(!greeted){greeted=true;addMsg('Hi! I’m Lemmy, the Lemnos demand-gen assistant. Ask me about demand generation, or tell me what you’re working on.','bot');}}
     function closePanel(){panel.classList.remove('open');}
 
     fab.addEventListener('click',()=>panel.classList.contains('open')?closePanel():openPanel());
