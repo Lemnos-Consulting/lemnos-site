@@ -451,6 +451,7 @@
             body:JSON.stringify(data)
           });
           if(!res.ok)throw new Error('Network error');
+          window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',lead_source:data.source||''});
           status.textContent='Thanks — Pete will get back to you within 1 business day.';
           status.className='form-status success';
           leadForm.reset();
@@ -570,11 +571,12 @@
         data.forEach(m=>{if(m.text)addMsg(m.text,'bot');if(m.buttons&&m.buttons.length)addButtons(m.buttons);});
       }catch(err){
         typing(false);
-        addMsg("I can't reach the assistant right now. Email pete@lemnos.io and we'll get back to you.",'bot');
+        addMsg("I can't reach the assistant right now — please use the contact form on this page and we'll get back to you.",'bot');
       }finally{sendBtn.disabled=false;input.focus();}
     }
 
     function openPanel(){panel.classList.add('open');input.focus();
+      window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'chat_open'});
       if(!greeted){greeted=true;addMsg('Hi! I’m Lemmy, the Lemnos demand-gen assistant. Ask me about demand generation, or tell me what you’re working on.','bot');}}
     function closePanel(){panel.classList.remove('open');}
 
